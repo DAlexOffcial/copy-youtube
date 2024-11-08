@@ -1,0 +1,51 @@
+<div class="flex gap-10 lg:gap-20 justify-between pt-2 mb-6 mx-4">
+    <div class="flex gap-4 items-center flex-shrink-0" [class]="showSerchBarState() ? 'hidden' : 'flex'">
+       <button class="flex items-center justify-center rounded-full h-12 w-12 hover:bg-gray-300/70">
+          <i class="fa-solid fa-bars text-xl"></i>
+       </button>
+       <a href="/" class="flex items-center">
+        <img src="../../../../assets/img/youtube-logo-icone.webp" class="h-6">
+       </a>
+    </div>
+    
+    <form class="md:flex hidden flex-grow gap-4 justify-center">
+       <div class="flex flex-grow max-w-[600px]">
+           <input placeholder="Search" class="rounded-l-full border border-gray-200 py-1 px-4 text-lg w-full focus:border-blue-500 outline-none " >
+           <button class="flex items-center justify-center py-2 px-4 rounded-r-full h-12 w-12 bg-gray-300/70 border border-1-0 flex-shrink-0 border-gray-200">
+            <i class="fa-solid fa-magnifying-glass text-xl"></i>
+         </button>
+       </div>
+       <div class="flex-shrink-0">
+           <button class="flex items-center justify-center rounded-full h-12 w-12 bg-gray-200/70 hover:bg-gray-400">
+              <i class="fa-solid fa-microphone text-xl"></i>
+           </button>
+       </div>
+    </form>
+    
+    <div *ngIf="showSerchBarState()" class="flex gap-2 justify-between items-center w-full">
+        <button (click)="ShowSerchBar(showSerchBarState())" class="flex items-center justify-center rounded-full h-12 w-12 hover:bg-gray-300/70 ">
+            <i class="fa-solid fa-arrow-left text-xl"></i>
+        </button>
+        <div class="flex-grow">
+            <input placeholder="Search" class="rounded-full border border-gray-200 py-1 px-4 text-lg w-full  outline-none " >
+        </div>
+        <button class="flex items-center justify-center rounded-full h-12 w-12 bg-gray-200/70">
+            <i class="fa-solid fa-microphone text-xl"></i>
+        </button>
+    </div>
+
+    <div class="flex flex-shrink-0 md:gap-2" [class]="showSerchBarState() ? 'hidden' : 'flex'">
+        <button (click)="ShowSerchBar(showSerchBarState())" class="md:hidden order-last md:order-none flex items-center justify-center rounded-full h-12 w-12 hover:bg-gray-300/70">
+            <i class="fa-solid fa-magnifying-glass text-xl"></i>
+       </button>
+        <button class="flex items-center justify-center rounded-full h-12 w-12 hover:bg-gray-300/70">
+            <i class="fa-solid fa-video text-xl"></i>
+       </button>
+       <button class="flex items-center justify-center rounded-full h-12 w-12 hover:bg-gray-300/70">
+           <i class="fa-solid fa-bell text-xl"></i>
+        </button>
+        <button class="hidden md:flex items-center justify-center rounded-full h-12 w-12 hover:bg-gray-300/70 ">
+            <i class="fa-solid fa-user text-xl"></i>
+        </button>
+    </div>
+</div>
