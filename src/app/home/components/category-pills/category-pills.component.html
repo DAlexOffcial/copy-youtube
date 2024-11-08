@@ -1,0 +1,26 @@
+<div class="overflow-x-hidden relative">
+  <div #scrollContainer class="overflow-auto flex whitespace-nowrap gap-3 transition-transform w-[max-content]">
+    <button
+      *ngFor="let item of getProgrammingTopics()"
+      (click)="selectTopic(item)"
+      [ngClass]="{
+        'bg-gray-900 text-white': selectedTopic === item,
+        'bg-gray-200 hover:bg-gray-300': selectedTopic !== item
+      }"
+      class="flex items-center justify-center py-1 px-3 rounded-lg whitespace-nowrap">
+      {{ item }}
+    </button>
+  </div>
+
+  <div class="absolute left-0 top-1/2 -translate-y-1/2 bg-gradient-to-r from-white from-50% to-transparent w-24 h-full">
+    <button (click)="moveLeft()" class="flex items-center justify-center h-full w-auto aspect-square p-1.5 hover:bg-gray-400 rounded-full">
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+  </div>
+
+  <div class="absolute right-0 top-1/2 -translate-y-1/2 bg-gradient-to-l from-white from-50% to-transparent w-24 h-full flex justify-end">
+    <button (click)="moveRight()" class="flex items-center justify-center h-full w-auto aspect-square p-1.5 hover:bg-gray-400 rounded-full">
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+  </div>
+</div>

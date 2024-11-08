@@ -4,7 +4,6 @@ import { fromEvent, map, Observable, startWith, Subscription } from 'rxjs';
 @Component({
   selector: 'page-header',
   templateUrl: './page-header.component.html',
-  styleUrls: ['./page-header.component.css']
 })
 export class PageHeaderComponent implements OnInit, OnDestroy{
   public showSerchBarState = signal<boolean>(false)
