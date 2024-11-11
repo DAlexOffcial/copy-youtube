@@ -1,0 +1,23 @@
+<div class="flex flex-col gap-2 ">
+    <a [href]="dynamicUrl" class="relative aspect-video">
+        <img [src]="infoVideo.thumbnailUrl" class="block w-full h-full object-cover transition-[border-radius] duration-200" [ngClass]="isVideoPlaying ? 'rounded-none' : 'rounded-xl'">
+        <div class="absolute bottom-1 right-1 bg-gray-950 text-white text-sm px-0.5 rounded"> {{ formatTime( infoVideo.duration)}}</div>
+        <video [src]="infoVideo.videoUrl" [muted]="true" [playsInline]="true" #videoElement class="block w-full h-full object-cover absolute inset-0 transition-opacity duration-200 " [ngClass]="isVideoPlaying ? 'opacity-100 delay-200' :'opacity-0'"></video>
+    </a>
+    <div class="flex gap-2">
+        <a [href]="channel" class="flex-shrink-0">
+            <img [src]="infoVideo.channel.profileUrl" class="w-12 h-12">
+        </a>
+        <div class="flex flex-col">
+            <a [href]="dynamicUrl" class="font-bold">
+                {{infoVideo.title}}
+            </a>
+            <a [href]="channel" class="text-gray-400 text-sm">
+               {{infoVideo.channel.name}}
+            </a>
+            <div class="text-gray-400 text-sm">
+                {{ formatView( infoVideo.views) }} Views • {{formatDaysAgo(infoVideo.postedAt)}}
+            </div>
+        </div>
+    </div>
+</div>

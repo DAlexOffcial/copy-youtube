@@ -1,9 +1,15 @@
 
 
 <div class="grid grid-cols-[auto,1fr] flex-grow-1 overflow-auto">
-    <div class="overflow-hidden px-8 pb-8">
+    <div class="overflow-x-hidden px-8 pb-8">
         <div class="sticky top-0 bg-white z-10 pb-4">
+            <!--sidebar-->
             <category-pills></category-pills>
+        </div>
+        <div class="grid gap-4 grid-cols-[repeat(auto-fill,minmax(300px,1fr))]">
+            <ng-container *ngFor="let video of getVideosInfo()">
+                <video-grid-item [infoVideo]="video"></video-grid-item>
+            </ng-container>
         </div>
     </div>
 </div>
