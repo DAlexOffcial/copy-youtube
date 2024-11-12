@@ -1,0 +1,10 @@
+<div>
+    <aside class="sticky top-0 overflow-y-auto scrollbar-hidden pb-4 flex flex-col ml-1 lg:hidden">
+         <ng-container *ngFor="let item of itemsSideBarItems()">
+             <small-side-bar-item [itemBar]="item"></small-side-bar-item>
+         </ng-container>   
+        </aside>
+        <aside class="w-56 lg:sticky absolute top-0 overflow-y-auto scrollbar-hidden pb-4 flex-col gap-2 px-2 flex">
+        <large-sidebar-section>    </large-sidebar-section>
+    </aside>
+</div>
