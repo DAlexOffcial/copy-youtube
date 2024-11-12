@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { sideBarItem } from '../../interface/sideBarItem.interface';
+import { sideBarItems } from '../../constants/sideBarItem.contants';
 
 @Component({
   selector: 'small-side-bar-item',
@@ -7,5 +8,15 @@ import { sideBarItem } from '../../interface/sideBarItem.interface';
   styleUrls: ['./small-side-bar-item.component.css']
 })
 export class SmallSideBarItemComponent {
-  @Input() itemBar!: sideBarItem 
+
+
+  itemsSideBarItems () : sideBarItem[] {
+    return sideBarItems
+  }
+
+  selectedTopic: string = 'Home';
+  onSelectTopic(topic: string): void {
+    this.selectedTopic = topic;
+  }
+  
 }

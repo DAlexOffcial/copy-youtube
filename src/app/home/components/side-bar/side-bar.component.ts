@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { sideBarItem } from '../../interface/sideBarItem.interface';
-import { sideBarItems } from '../../constants/sideBarItem.contants';
+
 
 @Component({
   selector: 'side-bar',
@@ -9,7 +8,5 @@ import { sideBarItems } from '../../constants/sideBarItem.contants';
 })
 export class SideBarComponent {
 
-  itemsSideBarItems () : sideBarItem[] {
-    return sideBarItems
-  }
+
 }

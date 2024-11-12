@@ -5,8 +5,8 @@
         <video [src]="infoVideo.videoUrl" [muted]="true" [playsInline]="true" #videoElement class="block w-full h-full object-cover absolute inset-0 transition-opacity duration-200 " [ngClass]="isVideoPlaying ? 'opacity-100 delay-200' :'opacity-0'"></video>
     </a>
     <div class="flex gap-2">
-        <a [href]="channel" class="flex-shrink-0">
-            <img [src]="infoVideo.channel.profileUrl" class="w-12 h-12">
+        <a [href]="channel" class="flex-shrink-0 ">
+            <img [src]="infoVideo.channel.profileUrl" class="w-12 h-12 rounded-full">
         </a>
         <div class="flex flex-col">
             <a [href]="dynamicUrl" class="font-bold">

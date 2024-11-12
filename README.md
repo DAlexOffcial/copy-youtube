@@ -1,3 +1,12 @@
+# Exageradamente importante si lo vasa a subir a netlify
+
+poner el archivo de netlify.toml y poner esto dentro 
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
 # CopyYoutuve
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.

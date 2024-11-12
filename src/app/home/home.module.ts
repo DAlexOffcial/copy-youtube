@@ -7,7 +7,6 @@ import { CategoryPillsComponent } from './components/category-pills/category-pil
 import { VideoGridItemComponent } from './components/video-grid-item/video-grid-item.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { SmallSideBarItemComponent } from './components/small-side-bar-item/small-side-bar-item.component';
-import { LargeSidebarSectionComponent } from './components/large-sidebar-section/large-sidebar-section.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +15,6 @@ import { LargeSidebarSectionComponent } from './components/large-sidebar-section
     VideoGridItemComponent,
     SideBarComponent,
     SmallSideBarItemComponent,
-    LargeSidebarSectionComponent,
   ],
   imports: [
     CommonModule,
